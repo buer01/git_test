@@ -9,6 +9,7 @@ from itemadapter import ItemAdapter
 import scrapy
 from scrapy.pipelines.images import  ImagesPipeline
 import os
+from img_download.settings import IMAGES_STORE as path
 class ImgDownloadPipeline(ImagesPipeline):
     number=1;
     def get_media_requests(self, item, info):
@@ -17,7 +18,6 @@ class ImgDownloadPipeline(ImagesPipeline):
 
     def item_completed(self, results, item, info):
         print(results);
-        path='D:/python/projec_git/spider/img_download/image/'
         if(results[0][0]==True):
             os.rename(path+results[0][1]['path'],path+'full/'+str(self.number)+'.jpg');
             self.number+=1;

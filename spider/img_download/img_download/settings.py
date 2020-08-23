@@ -20,7 +20,7 @@ USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, li
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False;
 LOG_LEVEL='WARNING';
-#图片存放位置
+#图片存放位置（修改此处）
 IMAGES_STORE='D:/python/projec_git/spider/img_download/image/'
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
